@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a class="main-header-logo" href="index.html">
-				<figure class="maine-logo">
+			<a class="main-header-logo" href="#">				
 					<img src="img/logo.png" width="160" height="65" 
-					alt="Логотип Нердс магазин">
-				</figure>	
+					alt="Логотип Нердс магазин">	
 			</a>
 			<ul class="site-navigation">
 				<li><a href="#">Студия</a></li>
@@ -23,7 +24,7 @@
 				<li class="cart-link"><a href="#">Корзина</a></li>
 			</ul>
 		</nav>
-		<h1>Магазин готовых шаблонов</h1>
+		<h1 class="main-header-title">Магазин готовых шаблонов</h1>
 	</header>
 	<main class="catalog-container">
 		<Section class="catalog-left-column">
@@ -31,19 +32,19 @@
 			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 				<h3 class="catalog-price">Стоимость:</h3>
 				<div class="catalog-range-price">
-					<input class="visually-hidden filter-input filter-input-checkbox"
+					<input class="visually-hidden filter-input filter-input-range"
 					type="range" min="0" max="15000" name="filter-range">
 				</div>
 				<div class="catalog-controls-left">
-					<span class="catalog-price-from">от</span>
-					<input class="catalog-min-price" type="text" value="0">
+					<span class="text-range catalog-price-from">от</span>
+					<input class="text-range catalog-min-price" type="text" value="0">
 				</div>
 				<div class="catalog-controls-right">
-					<span class="catalog-price-till">до</span>
-					<input class="catalog-max-price" type="text" value="15 000">
+					<span class="text-range catalog-price-till">до</span>
+					<input class="text-range catalog-max-price" type="text" value="15 000">
 				</div>	
 				<fieldset>
-					<legend class="catalog-grid">Сетка:</legend>			
+					<legend class="catalog-title">Сетка:</legend>			
 					<ul class="catalog-grid-list">
 						<li class="filter-option">
 							<input class="visually-hidden filter-input 
@@ -60,14 +61,14 @@
 						<li class="filter-option">
 							<input class="visually-hidden filter-input 
 							filter-input-radio" type="radio" name="site-grid"
-							value="site-Rubber" id="filter-Rubber">
+							value="site-Rubber" id="filter-Rubber" disabled>
 							<label for="filter-Rubber">Резиновая</label>
 						</li>				
 					</ul>				
 				</fieldset>
 			
 				<fieldset>
-					<legend class="catalog-features">Особенности:</legend>
+					<legend class="catalog-title">Особенности:</legend>
 					<ul class="catalog-features-list">
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" 
@@ -102,7 +103,7 @@
 		<section class="catalog-right-column">
 			<h3 class="catalog-sort">Сортировать:</h3>
 			<ul class="list-item">
-				<li><a href="#" class="catalog-option">По цене</a></li>
+				<li><a href="#" class="catalog-option-active">По цене</a></li>
 				<li><a href="#" class="catalog-option-active">По типу</a></li>
 				<li><a href="#" class="catalog-option-active">По функционалу</a></li>
 			</ul>
@@ -209,7 +210,7 @@
 				тел.+7(812)275-75-75<br>
 				<br>			
 			</p>
-			<a href="#">Напишите нам</a>
+			<a class="button btn-contacts" href="#">Напишите нам</a>
 		</div>
 			<img src="img/map.jpg" width="1725" height="808"
 			alt="Карта">
@@ -222,31 +223,26 @@
 		</div>
 		<section class="footer-info">
 			<h3 class="visually-hidden">Скидка</h3>
-			<p class="footer-title"><b>Давайте дружить, это выгодно!</b></p>
+			<b class="footer-title">Давайте дружить, это выгодно!</b>
 			<p class="footer-info-item">Скидка 10% для друзей из социальных сетей</p>
 		</section>
 	</footer>
-	<section class="modal-feedback">
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-				<h3>Напишите нам</h3>
-                <p class="feedback-left-column">
-                    <label class="visually-hidden" for="user-login">Ваше имя:</label>
-                    <input class="login-icon-user" type="text" id="user-login" name="login" 
-						placeholder="Представьтесь, пожалуйста" required>
-                </p>
-                <p class="feedback-right-column">
-                    <label class="visually-hidden" for="user-email">Ваш e-mail:</label>
-                    <input class="login-icon-email" type="email" id="user-email" name="email" 
-						placeholder="Для отправки ответа" required>
-                </p>
-				<p>
-					<label class="visually-hidden" for="feedback-textarea">Текст письма:</label>
-					<textarea class="text-icon" id="feedback-textarea" name="text"
-						placeholder="В свободной форме" required rows="5"></textarea> 
-				</p>		
-                <button class="btn feedback-btn" type="submit">Отправить</button>
+	<div class="feedback-container">
+        <form action="/feedback" method="post">
+				<b class="modal-feedback-title">Напишите нам</b>
+                <div class="feedback-left-column">
+                    <label class="feedback-data" for="feedback-login">Ваше имя:</label>
+                    <input type="text" name="login" id="feedback-login" placeholder="Представьтесь, пожалуйста" required>
+                </div>
+                <div class="feedback-right-column">
+                    <label class="feedback-data" for="feedback-email">Ваш e-mail:</label>
+                    <input type="email" name="email" id="feedback-email" placeholder="Для отправки ответа" required>
+                </div>
+				<label class="feedback-data" for="feedback-textarea">Текст письма:</label>
+				<textarea name="text" id="feedback-textarea" placeholder="В свободной форме" required rows="5"></textarea>            
+                <button type="submit" class="button feedback-btn">Отправить</button>
+				<button type="submit" class="btn feedback-btn">Закрыть</button>
         </form>
-		 <button class="modal-close" type="button">Закрыть</button>
-	</section>	
+	</div>	
   </body>
 </html>

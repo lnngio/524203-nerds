@@ -1,0 +1,309 @@
+body {
+	margin: 0;
+	padding: 0;
+	
+	font-family: 'Roboto', arial, sans-serif;
+	background-color: white;
+    color: #000000;
+	font-weight: 400;
+	font-size: 16px;
+    line-height: 24px;
+}
+
+p,
+.text-range,
+.text-order {
+	color: #283136;
+}
+
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+ul {
+    list-style: none;
+}
+
+.main-header {
+	background-color: #eeeeee;
+}
+
+.main-header-logo:hover {
+}
+
+.main-header-logo:focus {
+	opacity: 0.3;
+}
+
+.cart-navigation,
+.site-navigation {
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: 500;
+	color: black;
+}
+
+
+.site-navigation a:hover {
+	color: #fb565a;
+}
+.site-navigation a:active {
+	color: #c0c0c0;
+}
+
+.site-navigation a:focus {
+	border-bottom: 2px solid #fb565a;
+}
+
+.cart-navigation a:hover {
+	color: #fb565a;
+}
+.cart-navigation a:active{
+	color: #c0c0c0;
+}
+
+.cart-navigation a:focus {
+	border-bottom: 2px solid #fb565a;
+}
+.main-header-title,
+.slider-title {
+	font-size: 55px;
+	line-height: 55px;
+	font-weight: 500;	
+}
+
+/*основная часть*/
+
+.offer-item-title {
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 700;
+}
+
+.button {
+	font: inherit;
+	
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	background-color: #fb565a;
+	border: none;
+	color: #ffffff; 
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+	
+}
+
+.button:hover {
+	background-color: #d7373b;
+}
+
+.button:active {
+color: rgba(225,255,255,0.3);
+}
+
+.offer-mobile {
+	background-color: #00ca74;
+}
+
+.offer-mobile:hover {
+	background-color: #00bc6c;
+}
+
+.offer-mobile:active {
+	background-color: #00aa62;
+}
+.offer-site {
+	background-color: #efc84a;
+}
+
+.offer-site:hover {
+	background-color: #eab534;
+}
+
+.offer-site:active {
+	background-color: #e5a722;
+}
+
+
+.detail-title {
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 700;
+}
+
+table th {
+	font-size: 45px;
+	font-weight: 700;
+}
+
+table td {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #283136;
+}
+
+.brand-item {
+	opacity: 0.2;
+}
+
+.brand-item:hover {
+	opacity: 1;
+}
+
+.brand-item:active {
+	opacity: 0.1;
+}	
+
+.filter  fieldset {
+	border: none;
+}
+.title-contacts,
+.filter legend {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+}
+.filter ul {
+  list-style: none;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.filter-input-range {
+	color: #eeeeee;
+	opacity: 1;
+}
+
+.catalog-min-price,
+.catalog-max-price {
+	background-color: #eeeeee;	
+}
+
+.filter-input,label {
+	color: #283136;	
+}
+
+.filter-input:hover + label {
+	color: #000000;
+	
+}
+
+.filter-input:disabled + label {
+	color: #283136;
+	opacity: 0.3;
+}
+
+.footer-title {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 700;
+}
+
+.footer-contacts {
+	font-size: 16px;
+	line-height: 18px;
+	color: #666666;
+}
+
+.footer-info-item {
+	color: #444444;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.modal-feedback-title {
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: 500;
+}
+
+.feedback-data {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
+}
+
+.modal-login input {
+	font: inherit;
+}
+.modal-login input[type="text"]:placeholder,
+.modal-login input[type="email"],
+textarea {
+	color: rgba(68, 68, 68, 0.502);
+	border: 2px solid rgba(68, 68, 68, 0.502);
+	text-transform: uppercase;
+}
+
+.modal-login input:focus::required {
+    border: 1px solid red;
+}
+
+textarea:hover,
+.modal-login input:hover {
+border: 2px solid #b4b9bb;
+color: #444444;
+}
+
+textarea:focus,
+.modal-login input:focus {
+border: 2px solid #444444;
+}
+
+.pagination-item,
+.button-show {
+	display: inline-block;
+	color: #000000;
+	background-color: #eeeeee;
+}
+
+.pagination-item:hover,
+.button-show:hover {
+	background-color: #dfdfdf;
+}
+
+.pagination-item:active,
+.button-show:active {
+	background-color: #d5d5d5;
+	opacity: 0.3;
+	color: #000000;
+}
+
+.catalog-sort {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 700;
+}
+
+.catalog-option-active {
+	color: #000000;
+	opacity: 0.3;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+.catalog-option-active:hover {
+	color: #000000;
+	opacity: 0.6;
+}
+ 
+.catalog-option-active:focus {
+	color: #000000;
+	opacity: 1;
+}
+
+.catalog-btn,
+.catalog-btn:hover,
+.catalog-btn:active {
+	color: #ffffff;
+}
+  
+
+
+	
